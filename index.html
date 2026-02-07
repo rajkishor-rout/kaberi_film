@@ -51,31 +51,36 @@ text-shadow:0 0 40px rgba(255,255,255,0.6);
 
 /* scenes */
 .scene{
-position:absolute;
+position:fixed;
 inset:0;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:40px;
+padding:20px;
 font-size:26px;
 line-height:1.6;
 opacity:0;
 transition:opacity 2.5s ease;
+
+max-width:95%;
+margin:auto;
 }
 
 .show{opacity:1;}
 
 .scene img{
-max-width:90%;
-max-height:90vh;
+max-width:95%;
+max-height:85vh;
 object-fit:contain;
 border-radius:12px;
+display:block;
+margin:auto;
 }
 
 /* credits */
 #credits{
-position:absolute;
+position:fixed;
 bottom:-100%;
 width:100%;
 font-size:20px;
@@ -164,6 +169,7 @@ n.style.opacity=1;
 setTimeout(()=>{
 n.style.opacity=0;
 t.classList.add("zoom");
+boom.currentTime=0;
 boom.play().catch(()=>{});
 },2000);
 
@@ -174,6 +180,7 @@ startStory();
 }
 
 function startStory(){
+music.currentTime=0;
 music.play().catch(()=>{});
 
 scenes[0].classList.add("show");
