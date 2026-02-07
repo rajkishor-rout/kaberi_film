@@ -17,8 +17,7 @@ overflow:hidden;
 /* netflix intro */
 #netflix{
 position:fixed;
-width:100%;
-height:100vh;
+inset:0;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -33,8 +32,7 @@ transition:opacity 1.5s;
 /* title */
 #title{
 position:fixed;
-width:100%;
-height:100vh;
+inset:0;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -42,20 +40,19 @@ text-align:center;
 font-size:38px;
 z-index:9;
 opacity:0;
-transition:opacity 1.5s;
-left:0;
-top:0;
+transition:opacity 1.5s, transform 2s ease;
 }
 
 .zoom{
 opacity:1 !important;
 transform:scale(1.1);
+text-shadow:0 0 40px rgba(255,255,255,0.6);
 }
 
+/* scenes */
 .scene{
 position:absolute;
-width:100%;
-height:100vh;
+inset:0;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -65,14 +62,18 @@ font-size:26px;
 line-height:1.6;
 opacity:0;
 transition:opacity 2.5s ease;
-
-/* FIX CENTER */
-left:0;
-top:0;
 }
 
 .show{opacity:1;}
 
+.scene img{
+max-width:90%;
+max-height:90vh;
+object-fit:contain;
+border-radius:12px;
+}
+
+/* credits */
 #credits{
 position:absolute;
 bottom:-100%;
@@ -97,15 +98,16 @@ to{bottom:130%;}
 <audio id="boom" src="boom.mp3"></audio>
 <audio id="music" src="music.mp3"></audio>
 
-<!-- SCENES (unchanged) -->
+<!-- SCENES -->
+
 <div class="scene">2021…<br>Ramadevi College.</div>
 <div class="scene">Se dina sabu normal thila —<br>kintu mora jiban badalijiba boli mu janinathili.</div>
 <div class="scene">Bhida bhitare mu taku prathama thara dekhi thili.<br>sai jhia ku</div>
 <div class="scene">Se kebala gote naam nuha…<br>se dhire dhire mora aadat heigala.</div>
 <div class="scene">Kaberi.</div>
-<div class="scene"><img src="photo1.jpg" alt="Kaberi"></div>
-<div class="scene"><img src="photo2.jpg" alt="Kaberi"></div>
-<div class="scene"><img src="photo3.jpg" alt="Kaberi"></div>
+<div class="scene"><img src="photo1.jpg"></div>
+<div class="scene"><img src="photo2.jpg"></div>
+<div class="scene"><img src="photo3.jpg"></div>
 <div class="scene">College re ama relationship ku samaste khilaaf re thile.<br>Lokanka katha thila —<br>“Eita tikiba nahin”<br>“Break up heijiba”<br>“Time pass”</div>
 <div class="scene">Kintu samaste bhul thile.</div>
 <div class="scene">Jou mane amaku alaga karibaku chahuthile,<br>aga semanankara nijara break up heigala.<br>Samaya sabu dekhila…<br>kintu ama prem thia rahila.</div>
@@ -154,15 +156,14 @@ const music=document.getElementById("music");
 document.body.addEventListener("click",startIntro,{once:true});
 
 function startIntro(){
-let n=document.getElementById("netflix");
-let t=document.getElementById("title");
+const n=document.getElementById("netflix");
+const t=document.getElementById("title");
 
 n.style.opacity=1;
 
 setTimeout(()=>{
 n.style.opacity=0;
 t.classList.add("zoom");
-boom.currentTime=0;
 boom.play().catch(()=>{});
 },2000);
 
@@ -173,7 +174,6 @@ startStory();
 }
 
 function startStory(){
-music.currentTime=0;
 music.play().catch(()=>{});
 
 scenes[0].classList.add("show");
