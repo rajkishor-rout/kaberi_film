@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaberi – A Love Film ❤️</title>
+
+<style>
+body{
+margin:0;
+background:black;
+color:white;
+font-family:system-ui, Arial, sans-serif;
+overflow:hidden;
+}
+
+/* netflix intro */
+#netflix{
+position:fixed;
+width:100%;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:80px;
+color:red;
+background:black;
+z-index:10;
+opacity:0;
+transition:opacity 1.5s;
+}
+
+/* title */
+#title{
+position:fixed;
+width:100%;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+font-size:38px;
+z-index:9;
+opacity:0;
+transform:scale(0.6);
+transition:opacity 1.5s ease, transform 2.5s ease;
+}
+
+.zoom{
+opacity:1 !important;
+transform:scale(1.1);
+}
+
+.scene{
+position:absolute;
+width:100%;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+font-size:26px;
+line-height:1.6;
+opacity:0;
+transition:opacity 2.5s ease;
+}
+
+.show{opacity:1;}
+
+#credits{
+position:absolute;
+bottom:-100%;
+width:100%;
+font-size:20px;
+text-align:center;
+animation:credits 30s linear forwards;
+display:none;
+}
+
+@keyframes credits{
+to{bottom:130%;}
+}
+</style>
+</head>
+
+<body>
+
+<div id="netflix">N</div>
+<div id="title">Kaberi ❤️<br>A Love Film</div>
+
+<audio id="boom" src="boom.mp3"></audio>
+<audio id="music" src="music.mp3"></audio>
+
+<!-- SCENES (unchanged) -->
+<div class="scene">2021…<br>Ramadevi College.</div>
+<div class="scene">Se dina sabu normal thila —<br>kintu mora jiban badalijiba boli mu janinathili.</div>
+<div class="scene">Bhida bhitare mu taku prathama thara dekhi thili.<br>sai jhia ku</div>
+<div class="scene">Se kebala gote naam nuha…<br>se dhire dhire mora aadat heigala.</div>
+<div class="scene">Kaberi.</div>
+<div class="scene"><img src="photo1.jpg" alt="Kaberi"></div>
+<div class="scene"><img src="photo2.jpg" alt="Kaberi"></div>
+<div class="scene"><img src="photo3.jpg" alt="Kaberi"></div>
+<div class="scene">College re ama relationship ku samaste khilaaf re thile.<br>Lokanka katha thila —<br>“Eita tikiba nahin”<br>“Break up heijiba”<br>“Time pass”</div>
+<div class="scene">Kintu samaste bhul thile.</div>
+<div class="scene">Jou mane amaku alaga karibaku chahuthile,<br>aga semanankara nijara break up heigala.<br>Samaya sabu dekhila…<br>kintu ama prem thia rahila.</div>
+<div class="scene">+2 dina…<br>balcony re rati rati dhari gapa.<br>Phone silent,<br>dunia bandh,<br>kebala ame duijana.</div>
+<div class="scene">Gote minute katha haba pain<br>gate dain mu jae,<br>kebala taku dekhiba pain.</div>
+<div class="scene">dinaka re gote jhalak pai<br>pura dina khusi heijauchi.</div>
+<div class="scene">Balcony re ghanta ghanta dhari<br>taku chahi rahiba —<br>se mora cinema thila,<br>se mora shanti thila,<br>se mora ghar thila.</div>
+<div class="scene">Tapare samaya badalila…</div>
+<div class="scene">+2 pare ame alaga college re padhilu.<br>City alaga,<br>routine alaga,<br>dunia alaga.</div>
+<div class="scene">Kintu…<br>ame alaga thai bi alaga nuhm.</div>
+<div class="scene">Lokamane kahile —<br>“Long distance tikiba nai.”</div>
+<div class="scene">Ama story hasila.<br>Karana ama case re<br>se katha pura olta heigala.</div>
+<div class="scene">Distance ama prem ku kam karila nahin —<br>se taku au majbut karila.</div>
+<div class="scene">Hue ta…<br>kebe kebe mu tora chhota chhota katha ku dhari neuchi.</div>
+<div class="scene">Tora chhota bhul re bi ragi jai,<br>gaali dei pati kre kharab kri kuhe.</div>
+<div class="scene">Hue ta tu bhabuthibu —<br>“iee ete ragi kn pain?”</div>
+<div class="scene">Kintu etiki satya —<br>mu tora kebe kharab chaheni.</div>
+<div class="scene">Mo raga bhitare bi<br>bhari chinta achi.<br>Mo kathora katha bhitare bi<br>bhari prema achi.</div>
+<div class="scene">Haipare tora akhire<br>mu kebe kebe kharap laguchi.</div>
+<div class="scene">Kintu mo akhire nijaku dekh —<br>mu kebala gote loka nuha,<br>mu tora loka.</div>
+<div class="scene">Tu kahu —<br>“tu alaga jhia dekhuchu…”<br>kintu mora dunia bahut chhota.<br>Se dunia re kebala gote naam achi —<br>Kaberi.</div>
+<div class="scene">Lokamane asanti jaanti,<br>kintu mu jani mu kemiti.</div>
+<div class="scene">Mo nazar ghuri pariba,<br>kintu mora man kebe ghureni.<br>Se sabubele tora pakhare thae.</div>
+<div class="scene">Jhagada hela…<br>miss karilu…<br>kandilu…<br>kintu chhadilu nahin.</div>
+<div class="scene">Karana ama prem only perfect nuha —<br> real bhi.</div>
+<div class="scene">Lokanka bipareeta katha,<br>distance,<br>bhaya —<br>sabuthu bada hela ama ichha:<br>“saath rahiba”.</div>
+<div class="scene">Aji 5 barsha pare bi<br>ame ekathi achu.</div>
+<div class="scene">Na fairy tale,<br>na cinema,<br>kintu sata.</div>
+<div class="scene">Au mu jani —<br>e story ethi sesa nuha.<br>Eita kebala beginning.</div>
+<div class="scene">Kaberi…<br>tume mora aadat nuha.<br>tume mora choice nuha.<br><br>Tume mora forever. ❤️</div>
+
+<div id="credits">
+Kaberi ❤️ Me<br><br>
+A Real Love Story<br><br>
+5 Years Running…<br>
+Forever Continuing…
+</div>
+
+<script>
+const scenes=document.querySelectorAll(".scene");
+let i=0;
+
+const boom=document.getElementById("boom");
+const music=document.getElementById("music");
+
+document.body.addEventListener("click",startIntro,{once:true});
+
+function startIntro(){
+let n=document.getElementById("netflix");
+let t=document.getElementById("title");
+
+n.style.opacity=1;
+
+setTimeout(()=>{
+n.style.opacity=0;
+t.classList.add("zoom");
+boom.currentTime=0;
+boom.play().catch(()=>{});
+},2000);
+
+setTimeout(()=>{
+t.classList.remove("zoom");
+startStory();
+},4500);
+}
+
+function startStory(){
+music.currentTime=0;
+music.play().catch(()=>{});
+
+scenes[0].classList.add("show");
+
+setInterval(()=>{
+scenes[i].classList.remove("show");
+i++;
+
+if(i < scenes.length){
+scenes[i].classList.add("show");
+}else{
+document.getElementById("credits").style.display="block";
+}
+},5000);
+}
+</script>
+
+</body>
+</html>
